@@ -28,6 +28,8 @@ resource "aws_instance" "zookeeper" {
   tags = {
     Name = "zookeeper-${count.index + 1}"
   }
+  monitoring = true
+  tenancy    = "dedicated"
 }
 
 resource "aws_instance" "bookie" {
@@ -41,6 +43,8 @@ resource "aws_instance" "bookie" {
   tags = {
     Name = "bookie-${count.index + 1}"
   }
+  monitoring = true
+  tenancy    = "dedicated"
 }
 
 resource "aws_instance" "broker" {
@@ -54,6 +58,8 @@ resource "aws_instance" "broker" {
   tags = {
     Name = "broker-${count.index + 1}"
   }
+  monitoring = true
+  tenancy    = "dedicated"
 }
 
 resource "aws_instance" "proxy" {
@@ -67,4 +73,6 @@ resource "aws_instance" "proxy" {
   tags = {
     Name = "proxy-${count.index + 1}"
   }
+  monitoring = true
+  tenancy    = "dedicated"
 }
