@@ -27,9 +27,9 @@ num_broker_nodes    = 2
 num_proxy_nodes     = 1
 base_cidr_block     = "10.0.0.0/16"
 
-instance_types      = {
-  "zookeeper"   = "t3.small"
-  "bookie"      = "i3.4xlarge"
-  "broker"      = "c5.2xlarge"
-  "proxy"       = "c5.2xlarge"
+instance_types = {
+  "zookeeper" = "t3.small"
+  "bookie"    = "i3.4xlarge"
+  "broker"    = "c5.2xlarge"
+  "proxy"     = "c5.2xlarge"
 }
